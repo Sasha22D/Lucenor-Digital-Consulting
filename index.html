@@ -8,17 +8,12 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
   <a href="#main-content" class="sr-only">Skip to main content</a>
 
-  <!-- ============================================================
-       HEADER
-  ============================================================ -->
   <header id="site-header" role="banner">
     <div class="container">
       <nav class="nav-inner" role="navigation" aria-label="Main navigation">
-
         <a href="index.html" class="site-logo" aria-label="LUCENOR — Home">
           <svg class="site-logo__mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
@@ -28,16 +23,14 @@
           </svg>
           <span class="site-logo__name">LU<span>CENOR</span></span>
         </a>
-
         <ul class="nav-links" role="list">
           <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services/services.html">Services</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="insights.html">Insights</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-
         <div class="nav-actions">
           <button id="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -46,7 +39,6 @@
           </button>
           <a href="contact.html" class="btn btn--primary">Get in touch</a>
         </div>
-
         <button id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
           <svg id="nav-toggle-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="3" y1="6"  x2="21" y2="6"/>
@@ -58,35 +50,27 @@
             <line x1="20" y1="4" x2="4" y2="20"/>
           </svg>
         </button>
-
       </nav>
     </div>
-
-    <!-- MOBILE NAV PANEL -->
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
       <div class="container">
         <ul class="mobile-nav__links" role="list">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="services/services.html">Services</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="insights.html">Insights</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="mobile-nav__cta">
-          <a href="contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">Get in touch</a>
+          <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Get in touch</a>
         </div>
       </div>
     </nav>
-
   </header>
 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
   <main id="main-content">
 
-    <!-- HERO -->
     <section id="hero" aria-labelledby="hero-heading">
       <div class="hero-bg" aria-hidden="true">
         <div class="hero-bg__circle hero-bg__circle--1"></div>
@@ -114,33 +98,18 @@
           <div class="hero-visual" aria-hidden="true">
             <div class="hero-visual__card">
               <div class="hero-visual__stat-grid">
-                <div class="hero-stat">
-                  <div class="hero-stat__number">120+</div>
-                  <div class="hero-stat__label">Projects delivered</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="hero-stat__number">98%</div>
-                  <div class="hero-stat__label">Client satisfaction</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="hero-stat__number">40+</div>
-                  <div class="hero-stat__label">Expert consultants</div>
-                </div>
-                <div class="hero-stat">
-                  <div class="hero-stat__number">14</div>
-                  <div class="hero-stat__label">Countries served</div>
-                </div>
+                <div class="hero-stat"><div class="hero-stat__number">120+</div><div class="hero-stat__label">Projects delivered</div></div>
+                <div class="hero-stat"><div class="hero-stat__number">98%</div><div class="hero-stat__label">Client satisfaction</div></div>
+                <div class="hero-stat"><div class="hero-stat__number">40+</div><div class="hero-stat__label">Expert consultants</div></div>
+                <div class="hero-stat"><div class="hero-stat__number">14</div><div class="hero-stat__label">Countries served</div></div>
               </div>
-              <p class="hero-visual__desc">
-                From strategy to execution — we bring clarity to your digital transformation journey.
-              </p>
+              <p class="hero-visual__desc">From strategy to execution — we bring clarity to your digital transformation journey.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CLIENTS -->
     <section id="clients" aria-label="Trusted by leading organizations">
       <div class="container">
         <p class="clients-label">Trusted by forward-thinking organizations</p>
@@ -155,7 +124,6 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" class="section" aria-labelledby="services-heading">
       <div class="container">
         <div class="services-layout">
@@ -163,57 +131,43 @@
             <div class="section-header">
               <span class="section-eyebrow">Our Services</span>
               <h2 id="services-heading" class="section-title">End-to-end digital expertise</h2>
-              <p class="section-subtitle">
-                We offer a full spectrum of consulting services — from high-level strategy to hands-on delivery — so your digital ambitions become tangible results.
-              </p>
-              <a href="services.html" class="btn btn--ghost" style="margin-top: var(--space-6);">All services →</a>
+              <p class="section-subtitle">We offer a full spectrum of consulting services — from high-level strategy to hands-on delivery — so your digital ambitions become tangible results.</p>
+              <a href="services/services.html" class="btn btn--ghost" style="margin-top: var(--space-6);">All services →</a>
             </div>
           </div>
           <div class="services-grid">
-            <a href="services/digital-strategy.html" class="service-card">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
+            <a href="services/services.html#digital-strategy" class="service-card">
+              <div class="service-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
               <h3 class="service-card__title">Digital Strategy</h3>
               <p class="service-card__desc">Crafting clear digital roadmaps aligned with your business objectives and market opportunities.</p>
               <span class="service-card__link">Learn more →</span>
             </a>
-            <a href="services.html#data-analytics" class="service-card">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
+            <a href="services/services.html#data-analytics" class="service-card">
+              <div class="service-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
               <h3 class="service-card__title">Data &amp; Analytics</h3>
               <p class="service-card__desc">Turning raw data into actionable intelligence — from data architecture to AI-powered insights.</p>
               <span class="service-card__link">Learn more →</span>
             </a>
-            <a href="services.html#technology" class="service-card">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
-              </div>
+            <a href="services/services.html#technology" class="service-card">
+              <div class="service-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l6 6M15 9l-6 6"/></svg></div>
               <h3 class="service-card__title">Technology &amp; Architecture</h3>
               <p class="service-card__desc">Modern cloud, API-first, and microservices architectures built for scale and resilience.</p>
               <span class="service-card__link">Learn more →</span>
             </a>
-            <a href="services.html#transformation" class="service-card">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-              </div>
+            <a href="services/services.html#transformation" class="service-card">
+              <div class="service-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
               <h3 class="service-card__title">Digital Transformation</h3>
               <p class="service-card__desc">Leading large-scale organizational change with agile frameworks and change management expertise.</p>
               <span class="service-card__link">Learn more →</span>
             </a>
-            <a href="services.html#product" class="service-card">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
+            <a href="services/services.html#product" class="service-card">
+              <div class="service-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
               <h3 class="service-card__title">Product Design &amp; UX</h3>
               <p class="service-card__desc">Human-centred design that delivers intuitive experiences, from research to polished interfaces.</p>
               <span class="service-card__link">Learn more →</span>
             </a>
-            <a href="services.html#cybersecurity" class="service-card">
-              <div class="service-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
+            <a href="services/services.html#cybersecurity" class="service-card">
+              <div class="service-card__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <h3 class="service-card__title">Cybersecurity</h3>
               <p class="service-card__desc">Risk assessment, security architecture, and compliance programmes to protect your digital assets.</p>
               <span class="service-card__link">Learn more →</span>
@@ -223,7 +177,6 @@
       </div>
     </section>
 
-    <!-- WHY LUCENOR -->
     <section id="why" class="section" aria-labelledby="why-heading">
       <div class="container--narrow">
         <div class="section-header">
@@ -234,29 +187,28 @@
           <div class="why-item">
             <div class="why-item__number" aria-hidden="true">01</div>
             <h3 class="why-item__title">Strategy meets execution</h3>
-            <p class="why-item__desc">We don't hand off a slide deck and leave. Our teams stay engaged from strategy design through go-live, ensuring recommendations become working reality.</p>
+            <p class="why-item__desc">We don’t hand off a slide deck and leave. Our teams stay engaged from strategy design through go-live, ensuring recommendations become working reality.</p>
           </div>
           <div class="why-item">
             <div class="why-item__number" aria-hidden="true">02</div>
             <h3 class="why-item__title">Sector-deep expertise</h3>
-            <p class="why-item__desc">With consultants who have spent years inside the industries we serve, we bring contextual knowledge that generalist firms simply can't replicate.</p>
+            <p class="why-item__desc">With consultants who have spent years inside the industries we serve, we bring contextual knowledge that generalist firms simply can’t replicate.</p>
           </div>
           <div class="why-item">
             <div class="why-item__number" aria-hidden="true">03</div>
             <h3 class="why-item__title">Outcome-based engagement</h3>
-            <p class="why-item__desc">We price on value delivered, not hours billed. That alignment means we're always working toward the same goal — your success.</p>
+            <p class="why-item__desc">We price on value delivered, not hours billed. That alignment means we’re always working toward the same goal — your success.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WORK -->
     <section id="work" class="section" aria-labelledby="work-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Selected Work</span>
           <h2 id="work-heading" class="section-title">Projects that moved the needle</h2>
-          <p class="section-subtitle">A sample of the work we're proud of — real outcomes for real clients.</p>
+          <p class="section-subtitle">A sample of the work we’re proud of — real outcomes for real clients.</p>
         </div>
         <div class="work-grid">
           <a href="work/meridian-data-platform.html" class="case-card">
@@ -290,57 +242,33 @@
             </div>
           </a>
         </div>
-        <div class="work-cta">
-          <a href="work.html" class="btn btn--ghost">View all case studies →</a>
-        </div>
+        <div class="work-cta"><a href="work.html" class="btn btn--ghost">View all case studies →</a></div>
       </div>
     </section>
 
-    <!-- ABOUT TEASER -->
     <section id="about-teaser" class="section" aria-labelledby="about-teaser-heading">
       <div class="container">
         <div class="about-teaser-inner">
           <div class="about-teaser-content">
             <span class="section-eyebrow about-teaser__eyebrow">About LUCENOR</span>
             <h2 id="about-teaser-heading" class="about-teaser__title">A team of practitioners,<br/>not just advisors.</h2>
-            <p class="about-teaser__desc">
-              Founded with a simple belief: the best digital consulting comes from people who have actually built and run digital products. Our team combines strategic rigour with hands-on delivery experience across finance, health, retail, and the public sector.
-            </p>
+            <p class="about-teaser__desc">Founded with a simple belief: the best digital consulting comes from people who have actually built and run digital products. Our team combines strategic rigour with hands-on delivery experience across finance, health, retail, and the public sector.</p>
             <div class="about-teaser__metrics" role="list">
-              <div class="about-metric" role="listitem">
-                <div class="about-metric__number">2014</div>
-                <div class="about-metric__label">Founded</div>
-              </div>
-              <div class="about-metric" role="listitem">
-                <div class="about-metric__number">40+</div>
-                <div class="about-metric__label">Consultants</div>
-              </div>
-              <div class="about-metric" role="listitem">
-                <div class="about-metric__number">120+</div>
-                <div class="about-metric__label">Projects</div>
-              </div>
+              <div class="about-metric" role="listitem"><div class="about-metric__number">2014</div><div class="about-metric__label">Founded</div></div>
+              <div class="about-metric" role="listitem"><div class="about-metric__number">40+</div><div class="about-metric__label">Consultants</div></div>
+              <div class="about-metric" role="listitem"><div class="about-metric__number">120+</div><div class="about-metric__label">Projects</div></div>
             </div>
             <a href="about.html" class="btn btn--white" style="margin-top: var(--space-8);">Meet our team</a>
           </div>
           <div class="about-teaser__visual" aria-hidden="true">
-            <div class="about-visual-block">
-              <div class="about-visual-block__title">Our guiding principle</div>
-              <div class="about-visual-block__text">Every engagement starts with understanding your business deeply — only then do we design the digital response.</div>
-            </div>
-            <div class="about-visual-block">
-              <div class="about-visual-block__title">Sectors</div>
-              <div class="about-visual-block__text">Finance · Healthcare · Retail · Public Sector · Energy</div>
-            </div>
-            <div class="about-visual-block">
-              <div class="about-visual-block__title">Certifications</div>
-              <div class="about-visual-block__text">ISO 27001 · SOC 2 · PMI · AWS Partner</div>
-            </div>
+            <div class="about-visual-block"><div class="about-visual-block__title">Our guiding principle</div><div class="about-visual-block__text">Every engagement starts with understanding your business deeply — only then do we design the digital response.</div></div>
+            <div class="about-visual-block"><div class="about-visual-block__title">Sectors</div><div class="about-visual-block__text">Finance · Healthcare · Retail · Public Sector · Energy</div></div>
+            <div class="about-visual-block"><div class="about-visual-block__title">Certifications</div><div class="about-visual-block__text">ISO 27001 · SOC 2 · PMI · AWS Partner</div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
     <section id="testimonials" class="section" aria-labelledby="testimonials-heading">
       <div class="container--narrow">
         <div class="section-header" style="text-align:center;">
@@ -349,62 +277,34 @@
         </div>
         <div class="testimonials-grid">
           <article class="testimonial-card">
-            <blockquote>
-              <p class="testimonial-card__quote">LUCENOR didn't just deliver a strategy document — they rolled up their sleeves and made sure every recommendation actually landed. The results exceeded our expectations.</p>
-            </blockquote>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">SL</div>
-              <div>
-                <div class="testimonial-card__name">Sophie Laurent</div>
-                <div class="testimonial-card__role">CDO, Meridian Group</div>
-              </div>
-            </div>
+            <blockquote><p class="testimonial-card__quote">LUCENOR didn’t just deliver a strategy document — they rolled up their sleeves and made sure every recommendation actually landed. The results exceeded our expectations.</p></blockquote>
+            <div class="testimonial-card__author"><div class="testimonial-card__avatar" aria-hidden="true">SL</div><div><div class="testimonial-card__name">Sophie Laurent</div><div class="testimonial-card__role">CDO, Meridian Group</div></div></div>
           </article>
           <article class="testimonial-card">
-            <blockquote>
-              <p class="testimonial-card__quote">Their data team transformed how we make decisions. We went from gut-feel to genuine predictive capability in under six months.</p>
-            </blockquote>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">MK</div>
-              <div>
-                <div class="testimonial-card__name">Marco Kingsley</div>
-                <div class="testimonial-card__role">VP Technology, Vanta Health</div>
-              </div>
-            </div>
+            <blockquote><p class="testimonial-card__quote">Their data team transformed how we make decisions. We went from gut-feel to genuine predictive capability in under six months.</p></blockquote>
+            <div class="testimonial-card__author"><div class="testimonial-card__avatar" aria-hidden="true">MK</div><div><div class="testimonial-card__name">Marco Kingsley</div><div class="testimonial-card__role">VP Technology, Vanta Health</div></div></div>
           </article>
           <article class="testimonial-card">
-            <blockquote>
-              <p class="testimonial-card__quote">A rare firm that speaks both business and technology fluently. LUCENOR bridged the gap between our board's vision and our engineering team's execution.</p>
-            </blockquote>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">DP</div>
-              <div>
-                <div class="testimonial-card__name">Diana Park</div>
-                <div class="testimonial-card__role">CEO, Arcadia Finance</div>
-              </div>
-            </div>
+            <blockquote><p class="testimonial-card__quote">A rare firm that speaks both business and technology fluently. LUCENOR bridged the gap between our board’s vision and our engineering team’s execution.</p></blockquote>
+            <div class="testimonial-card__author"><div class="testimonial-card__avatar" aria-hidden="true">DP</div><div><div class="testimonial-card__name">Diana Park</div><div class="testimonial-card__role">CEO, Arcadia Finance</div></div></div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA BANNER -->
     <section id="cta-banner" aria-labelledby="cta-heading">
       <div class="container">
         <h2 id="cta-heading" class="cta-banner__title">Ready to accelerate your digital journey?</h2>
         <p class="cta-banner__desc">Whether you have a clear brief or a fuzzy challenge, our team is happy to explore how LUCENOR can help.</p>
         <div class="cta-banner__actions">
           <a href="contact.html" class="btn btn--white">Start a conversation</a>
-          <a href="services.html" class="btn btn--outline-white">Explore our services</a>
+          <a href="services/services.html" class="btn btn--outline-white">Explore our services</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
   <footer id="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-inner">
@@ -423,7 +323,7 @@
             <a href="" target="_blank" rel="noopener noreferrer" aria-label="LUCENOR on LinkedIn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" aria-label="LUCENOR on X (Twitter)">
+            <a href="" target="_blank" rel="noopener noreferrer" aria-label="LUCENOR on X">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1H22L14.5 10.1 23.3 23H16.2L10.9 15.6 4.9 23H1.8L9.8 13.3 1.3 1H8.6L13.4 7.9ZM17.8 21.1H19.6L6.6 2.9H4.7Z"/></svg>
             </a>
           </nav>
@@ -431,12 +331,12 @@
         <div class="footer-col">
           <h3 class="footer-col__title">Services</h3>
           <ul class="footer-col__links" role="list">
-            <li><a href="services.html#digital-strategy">Digital Strategy</a></li>
-            <li><a href="services.html#data-analytics">Data &amp; Analytics</a></li>
-            <li><a href="services.html#technology">Technology &amp; Architecture</a></li>
-            <li><a href="services.html#transformation">Digital Transformation</a></li>
-            <li><a href="services.html#product">Product Design &amp; UX</a></li>
-            <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
+            <li><a href="services/digital-strategy.html">Digital Strategy</a></li>
+            <li><a href="services/services.html#data-analytics">Data &amp; Analytics</a></li>
+            <li><a href="services/services.html#technology">Technology &amp; Architecture</a></li>
+            <li><a href="services/services.html#transformation">Digital Transformation</a></li>
+            <li><a href="services/services.html#product">Product Design &amp; UX</a></li>
+            <li><a href="services/services.html#cybersecurity">Cybersecurity</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -469,39 +369,46 @@
     </div>
   </footer>
 
-  <!-- ============================================================
-       JAVASCRIPT — inline, no fetch needed
-  ============================================================ -->
   <script>
-    // Theme init (before render to avoid flash)
     (function () {
+      var saved = localStorage.getItem('lucenor-theme');
       var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
     })();
-
     document.addEventListener('DOMContentLoaded', function () {
-
-      // ── Theme toggle ──────────────────────────────────────────
       var themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {
+        var root = document.documentElement;
+        updateIcon(root.getAttribute('data-theme'));
         themeToggle.addEventListener('click', function () {
-          var root = document.documentElement;
           var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
           root.setAttribute('data-theme', next);
-          themeToggle.setAttribute('aria-label', 'Switch to ' + (next === 'dark' ? 'light' : 'dark') + ' mode');
-          themeToggle.innerHTML = next === 'dark'
+          localStorage.setItem('lucenor-theme', next);
+          updateIcon(next);
+        });
+        function updateIcon(t) {
+          themeToggle.innerHTML = t === 'dark'
             ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
             : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-        });
+        }
       }
-
-      // ── Mobile nav ────────────────────────────────────────────
       var navToggle  = document.getElementById('nav-toggle');
       var siteHeader = document.getElementById('site-header');
       var mobileNav  = document.getElementById('mobile-nav');
       var iconOpen   = document.getElementById('nav-toggle-icon-open');
       var iconClose  = document.getElementById('nav-toggle-icon-close');
-
+      if (navToggle && siteHeader && mobileNav) {
+        navToggle.addEventListener('click', function () {
+          siteHeader.classList.contains('nav-open') ? closeNav() : openNav();
+        });
+        mobileNav.querySelectorAll('a').forEach(function (l) { l.addEventListener('click', closeNav); });
+        document.addEventListener('click', function (e) {
+          if (!siteHeader.contains(e.target) && siteHeader.classList.contains('nav-open')) closeNav();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && siteHeader.classList.contains('nav-open')) { closeNav(); navToggle.focus(); }
+        });
+      }
       function openNav() {
         siteHeader.classList.add('nav-open');
         navToggle.setAttribute('aria-expanded', 'true');
@@ -510,7 +417,6 @@
         if (iconOpen)  iconOpen.style.display  = 'none';
         if (iconClose) iconClose.style.display = 'block';
       }
-
       function closeNav() {
         siteHeader.classList.remove('nav-open');
         navToggle.setAttribute('aria-expanded', 'false');
@@ -519,30 +425,6 @@
         if (iconOpen)  iconOpen.style.display  = 'block';
         if (iconClose) iconClose.style.display = 'none';
       }
-
-      if (navToggle && siteHeader && mobileNav) {
-        navToggle.addEventListener('click', function () {
-          siteHeader.classList.contains('nav-open') ? closeNav() : openNav();
-        });
-
-        mobileNav.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', closeNav);
-        });
-
-        document.addEventListener('click', function (e) {
-          if (!siteHeader.contains(e.target) && siteHeader.classList.contains('nav-open')) {
-            closeNav();
-          }
-        });
-
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && siteHeader.classList.contains('nav-open')) {
-            closeNav();
-            navToggle.focus();
-          }
-        });
-      }
-
     });
   </script>
 
