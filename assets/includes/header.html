@@ -1,0 +1,92 @@
+<header id="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="LUCENOR — Home">
+        <svg class="site-logo__mark" viewBox="0 0 36 36" fill="none"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+          <rect x="10" y="9" width="5" height="18" rx="1.5" fill="white"/>
+          <rect x="10" y="22" width="16" height="5" rx="1.5" fill="white"/>
+          <circle cx="26" cy="11" r="3" fill="var(--color-accent)"/>
+        </svg>
+        <span class="site-logo__name">LU<span>CENOR</span></span>
+      </a>
+
+      <!-- Nav Links (desktop) -->
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Actions (desktop) -->
+      <div class="nav-actions">
+        <button id="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="contact.html" class="btn btn--primary">Get in touch</a>
+      </div>
+
+      <!-- Hamburger button (mobile only) -->
+      <button id="nav-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav">
+        <!-- Hamburger icon — swapped to X when open via JS -->
+        <svg id="nav-toggle-icon-open" width="22" height="22" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="nav-toggle-icon-close" width="22" height="22" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"
+             style="display:none;">
+          <line x1="4" y1="4" x2="20" y2="20"/>
+          <line x1="20" y1="4" x2="4" y2="20"/>
+        </svg>
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- ============================================================
+       MOBILE NAV PANEL
+       Hidden by default. Shown when #nav-toggle is clicked.
+       Controlled via .nav-open class on <header> (added by main.js)
+  ============================================================ -->
+  <nav id="mobile-nav"
+       class="mobile-nav"
+       aria-label="Mobile navigation"
+       aria-hidden="true">
+    <div class="container">
+
+      <!-- Main links -->
+      <ul class="mobile-nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="mobile-nav__cta">
+        <a href="contact.html" class="btn btn--primary" style="width:100%; justify-content:center;">
+          Get in touch
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
