@@ -4,23 +4,37 @@
 
 // ── 1. Theme: apply saved preference before first paint (no flash) ──
 (function () {
-  var saved      = localStorage.getItem('lucenor-theme');
+  var saved       = localStorage.getItem('lucenor-theme');
   var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
 }());
 
-// ── 2. Helpers ───────────────────────────────────────────────────
+// ── 2. Resolve root-relative base path ───────────────────────────
+// Works for any page depth: root (0 segments), one level deep (/services/), etc.
+// e.g. /index.html        → basePath = ''
+//      /services/         → basePath = '../'
+//      /services/foo.html → basePath = '../'
+(function () {
+  var parts = window.location.pathname
+    .replace(/\/[^/]*$/, '')  // strip filename / trailing segment
+    .split('/')
+    .filter(Boolean);          // remove empty strings
+  window.__basePath = parts.length ? parts.map(function () { return '..'; }).join('/') + '/' : '';
+}());
+
+// ── 3. Helpers ───────────────────────────────────────────────────
 
 /**
  * Fetch an HTML partial and inject it in place of `placeholder`.
+ * filePath is relative to the site root (e.g. 'assets/includes/header.html').
  * Returns a Promise that resolves when the HTML is in the DOM.
  */
 function injectPartial(placeholderId, filePath) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     var el = document.getElementById(placeholderId);
     if (!el) { resolve(); return; }
 
-    fetch(filePath)
+    fetch(window.__basePath + filePath)
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status + ' — ' + filePath);
         return res.text();
@@ -32,23 +46,26 @@ function injectPartial(placeholderId, filePath) {
       })
       .catch(function (err) {
         console.warn('[LUCENOR] Could not load partial:', filePath, err);
-        resolve(); // resolve anyway so Promise.all doesn't block the rest
+        resolve(); // never block Promise.all
       });
   });
 }
 
-// ── 3. Mark the active nav link ──────────────────────────────────
+// ── 4. Mark the active nav link ──────────────────────────────────
 function markActiveNavLink() {
-  var current = window.location.pathname.split('/').pop() || 'index.html';
+  var path = window.location.pathname;
   document.querySelectorAll('.nav-links a, .mobile-nav__links a').forEach(function (a) {
-    var isActive = a.getAttribute('href') === current;
+    var href = a.getAttribute('href');
+    // resolve href against basePath to get an absolute-like path for comparison
+    var absHref = '/' + (window.__basePath + href).replace(/^\//, '').replace(/\/+/g, '/');
+    var isActive = path === absHref || path.replace(/\/$/, '') === absHref.replace(/\/$/, '').replace(/\/index\.html$/, '');
     a.classList.toggle('active', isActive);
     if (isActive) { a.setAttribute('aria-current', 'page'); }
     else          { a.removeAttribute('aria-current'); }
   });
 }
 
-// ── 4. Theme toggle ──────────────────────────────────────────────
+// ── 5. Theme toggle ──────────────────────────────────────────────
 function initThemeToggle() {
   var toggle = document.querySelector('[data-theme-toggle]');
   if (!toggle) return;
@@ -71,7 +88,7 @@ function initThemeToggle() {
   });
 }
 
-// ── 5. Mobile nav ────────────────────────────────────────────────
+// ── 6. Mobile nav ────────────────────────────────────────────────
 function initMobileNav() {
   var btn    = document.getElementById('nav-toggle');
   var header = document.getElementById('site-header');
@@ -112,7 +129,7 @@ function initMobileNav() {
   });
 }
 
-// ── 6. Boot ──────────────────────────────────────────────────────
+// ── 7. Boot ──────────────────────────────────────────────────────
 // Fetch both partials in parallel; init UI only once BOTH are in the DOM.
 Promise.all([
   injectPartial('header-placeholder', 'assets/includes/header.html'),
